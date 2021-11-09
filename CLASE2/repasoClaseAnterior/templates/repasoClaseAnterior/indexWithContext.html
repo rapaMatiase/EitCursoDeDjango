@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>{{name}} - {{lastName}}</h1> 
+    
+    {% if status == "demorado" %}
+        <p style="color: red;"> Demorado </p>
+    {% else %} 
+        <p style="color: green;"> Al dia</p>
+    {% endif %}
+
+    <ul>
+    {% for item in Pendientes %}
+        <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
