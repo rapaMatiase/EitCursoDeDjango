@@ -14,16 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 # Como importo las vistas?
 # Aca importo todo lo que tiene el archivo.
 from repasoClaseAnterior import views 
 #Aca importando solo la funcion VistaSimple
 from repasoClaseAnterior.views import VistaSimple 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('intento1/', views.VistaSimple),
-    path('intento2/', VistaSimple)
+    #Estoy incluyento todas las urls del archivo urls de la app repasoClaseAnterior.
+    path('repaso/', include('repasoClaseAnterior.urls'))
+    #La linea de arriba equivale a 
+    # path('admin/', admin.site.urls),
+    # path('intento1/', views.VistaSimple),
+
 ]
