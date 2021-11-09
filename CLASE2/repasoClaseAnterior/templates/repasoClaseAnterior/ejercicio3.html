@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    bien hecho
+    {% if feeling == "angry" %}
+        <h1 style="color: red;">{{lastName}},{{name}}</h1>
+    {% elif feeling == "sad" %}
+        <h1 style="color: blue;">{{lastName}},{{name}}</h1>
+    {% elif feeling == "happy" %}
+        <h1 style="color: green;">{{lastName}},{{name}}</h1>
+    {% endif %}
+
+    Mal hecho
+    <h1 style="color: {% if feeling == "angry" %}
+        red
+    {% elif feeling == "sad" %}
+        blue
+    {% elif feeling == "happy" %}
+        green
+    {% endif %}">{{lastName}},{{name}}</h1>
+</body>
+</html>

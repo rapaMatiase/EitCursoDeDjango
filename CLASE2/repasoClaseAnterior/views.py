@@ -61,3 +61,36 @@ Crear una vista con template que reciba por la url el nombre, apellido y emosion
 Mostra en el HTML el nombre y aprellido de color verde si la emosion es felicidad, si no de color rojo si es enojado. Por ultimo, si es triste de color azul.
 3min 12.44AM 
  """
+
+def ejercicio3(request, name, lastName, feeling):
+    return render(
+        request,
+        'repasoClaseAnterior/ejercicio3.html',
+        {
+            "name" : name,
+            "lastName" : lastName,
+            "feeling" : feeling
+        }
+    )
+
+"""
+Ejercicio 4
+
+Dada una lista de diccionarios. Mostrar en pantalla en formato de lista con el elemento Ul. Si el estado es ok, mostrar de color verde, si el estado es no ok, mostrar de color rojo.
+4 min 13.03PM
+"""
+
+lista = [
+    {"name":"tomate", "status": "ok"},
+    {"name":"Cocacola", "status": "nook"},
+    {"name":"Lechuga", "status": "ok"},
+    {"name":"Manzana", "status": "ok"}
+    ]
+
+def ejercicio4(request):
+    
+    return render(
+        request,
+        'repasoClaseAnterior/ejercicio4.html',
+        {"lista": lista}
+    )
