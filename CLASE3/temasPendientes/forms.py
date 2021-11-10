@@ -7,3 +7,8 @@ class FormularioDeContacto(forms.Form):
 class FormularioDeQuejas(forms.Form):
     mail = forms.EmailField(max_length=20)
     cuerpo = forms.CharField(max_length=300)
+
+class FormularioLogin(forms.Form):
+    name = forms.CharField(max_length=20)
+    password = forms.CharField(widget=forms.PasswordInput())
+    

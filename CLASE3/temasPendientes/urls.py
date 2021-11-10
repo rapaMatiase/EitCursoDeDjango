@@ -4,7 +4,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.aboutUs, name='about'),
     path('contact/', views.contact, name='contact'),
-    path('quejas/', views.quejas, name='quejas')
+    path('quejas/', views.quejas, name='quejas'),
+    path('login/', views.login, name='login')
 ]
 
 """

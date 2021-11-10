@@ -77,3 +77,17 @@ def quejas(request):
     4min 12.44AM
     
     """
+
+def login(request):
+    form = forms.FormularioLogin()
+
+    if request.method == 'POST':
+        form = forms.FormularioLogin(request.POST)
+        if form.is_valid():
+            return redirect('index')
+
+    return render(
+        request,
+        'temasPendientes/login.html',
+        {"form" : form}
+    )
