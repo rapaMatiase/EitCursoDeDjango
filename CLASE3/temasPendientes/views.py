@@ -17,3 +17,14 @@ Crear 2 vistas con sus propios templates con los nombres;
 3 min 10.50
 """
 
+def aboutUs(request):
+    return render(
+        request,
+        'temasPendientes/aboutus.html',
+    )
+
+def contact(request):
+    return render(
+        request,
+        'temasPendientes/contact.html'
+    )
