@@ -39,7 +39,7 @@ Si este comando esta ejecutado correctamente, no deuvleve ningun mensaje por con
 
 Cosas que debo hacer despeus de crear una app nueva:
 * Agregar la app en la lista de INSTALL_APPS en setings.py en la carpeta del proyecto. 
-* Pendiente para dentro de un rato
+* Utilizar la funcion include para incluir las urls de mi app, y crear un archivo propio de urls en la app.
 
 ## ¿Como creo la respuesta mas sencilla posible?
 

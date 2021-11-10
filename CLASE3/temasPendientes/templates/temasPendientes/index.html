@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <a href="http://127.0.0.1:8000/pendientes/about/"> About us </a>
-    </header>
-    Hola, este es el index
-</body>
-</html>
+{% extends "temasPendientes/base_generic.html" %}
+
+{% block title%}
+    Home
+{% endblock %}
+
+{% block body %}
+    <p>Hola, este es el index!</p>
+{% endblock %}
