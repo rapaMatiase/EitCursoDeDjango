@@ -6,4 +6,12 @@
 
 {% block body %}
     Este es el contacto!!!
-{% endblock %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Enviar">
+    </form>
+    {{error}}
+
+    {% endblock %}
