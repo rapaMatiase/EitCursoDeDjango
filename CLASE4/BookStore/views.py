@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 json = [
     {
+        "id" : 1,
         "title" : "El arbol de las brujas",
         "year" : "1984",
         "author" : "Ray Bradbury",
@@ -13,6 +14,7 @@ json = [
         "stock" : 20
     },
     {
+        "id" : 2,
         "title" : "Las cronicas de Narnia - el leon, la bruja y el armario",
         "year" : "1950",
         "author" : "C. S. Lewis",
@@ -22,6 +24,7 @@ json = [
         "stock" : 3
     },
     {
+        "id" : 3,
         "title" : "Dune - parte 1",
         "year" : "1945",
         "author" : "Frank Herbert",

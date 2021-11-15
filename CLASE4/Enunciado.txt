@@ -18,3 +18,7 @@ Dada una variable hardcodeada en el view.py de nuesta app BookStore. Utilizar la
 Enaviar al book-list.html la lista de todos los libros y mostrar en formato de tabla los datos de cada libro.
 
 3 o 4 min 11.09AM
+
+Parte 3
+
+Agregar a la tabla una url a una vista nueva que muestre el detalle del libro seleccionado.
