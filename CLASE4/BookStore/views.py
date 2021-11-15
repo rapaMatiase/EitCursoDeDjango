@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Book
 # Create your views here.
 
 json = [
@@ -36,10 +36,11 @@ json = [
 ]
 
 def BookList(reuqest):
+    query = Book.objects.all()
     return render(
         reuqest,
         'BookStore/book-list.html',
-        {'bookList' : json }
+        {'bookList' : query }
     )
 
 def BookSearch(id):
@@ -50,10 +51,14 @@ def BookSearch(id):
     return bookFind
 
 def BookDetail(request, id):
-    book = BookSearch(id)
+    # book = BookSearch(id)
+
+    #El primer id es campo de base de datos, y el segundo el parametro id que recibe la vista.
+    query = Book.objects.filter(id=id)[0]
+    print(query)
     return render(
         request,
         'BookStore/book-detail.html',
-        {'book' : book}
+        {'book' : query}
     )
 
