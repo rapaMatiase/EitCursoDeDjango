@@ -20,6 +20,7 @@
                 <td> {{student.lastName}} </td>
                 <td> {{student.name}} </td>
                 <td> {{student.number}} </td>
+                <td> <a href="{% url 'StudentDetail' student.id  %}"> ver detalle </a></td>
             </tr>
         {% endfor %}
     </table>
