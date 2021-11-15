@@ -8,7 +8,7 @@ urlpatterns = [
         name="BookList"
         ),
     path(
-        'detail/',
+        'detail/<int:id>/',
         views.BookDetail,
         name="BookDetail"
     )

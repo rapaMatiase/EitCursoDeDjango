@@ -28,6 +28,7 @@
                 {% else %}
                     <td> NO DISPONIBLE </td>
                 {% endif %}
+                <td> <a href="{% url 'BookDetail' book.id %}">Ver detalle</a></td>
             </tr>
         {% endfor %}
     </table>

@@ -8,5 +8,17 @@
 </head>
 <body>
     <h1> Detalle del libro seleccioando</h1>
+    <p>Titulo : {{book.title}}</p>
+    <p>Author : {{book.author}}</p>
+    <p>Precio : {{book.price}}</p>
+    <p>Editorial : {{book.editorial}}</p>
+    {% if book.stock > 0%}
+        <p>DISPONIBLE</p>
+    {% else %}
+        <p> NO DISPONIBLE </p>
+    {% endif %}
+
+    <p>{{book.synopsis}}</p>
+
 </body>
 </html>

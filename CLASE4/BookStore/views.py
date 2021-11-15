@@ -42,10 +42,18 @@ def BookList(reuqest):
         {'bookList' : json }
     )
 
-def BookDetail(request):
+def BookSearch(id):
+    bookFind = ""
+    for book in json:
+        if book["id"] == id:
+            bookFind = book
+    return bookFind
+
+def BookDetail(request, id):
+    book = BookSearch(id)
     return render(
         request,
         'BookStore/book-detail.html',
-        {}
+        {'book' : book}
     )
 
