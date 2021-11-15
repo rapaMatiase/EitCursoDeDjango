@@ -24,3 +24,22 @@ Parte 3
 Agregar a la tabla una url a una vista nueva que muestre el detalle del libro seleccionado.
 
 3 o 4 min 11.58am
+
+Parte 4
+
+Crear un modelo de Book.
+
+Utilizar
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py shell
+
+from BookStore.models import Book
+
+b = Book(...atributos='valores')
+
+b.save()
+
+Book.objects.all()
