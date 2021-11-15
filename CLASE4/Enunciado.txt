@@ -1,6 +1,5 @@
 Ejercicio integrador del dia!!
 
-
 Parte 1
 
 Crear una nueva app llamada "BookStore" y agregarla al proyecto de la CLASE 4.
@@ -10,3 +9,8 @@ Crear 2 vistas con sus templates y urls respectivamente:
 
 
 3 o 4 min. Hasta 10.34Am
+
+
+Parte 2
+
+Dada una variable hardcodeada en el view.py de nuesta app BookStore. Utilizar la misma como si fuera una base de datos para consultadar informacion e enviarla al tempelte.
