@@ -1,0 +1,12 @@
+Ejercicio integrador del dia!!
+
+
+Parte 1
+
+Crear una nueva app llamada "BookStore" y agregarla al proyecto de la CLASE 4.
+Crear 2 vistas con sus templates y urls respectivamente:
+    - Lista de libros disponibles (bookList)
+    - El detalle de un libro (bookDetail)
+
+
+3 o 4 min. Hasta 10.34Am
