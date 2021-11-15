@@ -14,3 +14,7 @@ Crear 2 vistas con sus templates y urls respectivamente:
 Parte 2
 
 Dada una variable hardcodeada en el view.py de nuesta app BookStore. Utilizar la misma como si fuera una base de datos para consultadar informacion e enviarla al tempelte.
+
+Enaviar al book-list.html la lista de todos los libros y mostrar en formato de tabla los datos de cada libro.
+
+3 o 4 min 11.09AM

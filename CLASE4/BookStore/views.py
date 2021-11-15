@@ -28,7 +28,7 @@ json = [
         "synopsis" : "Describe las aventuras de un hombre en el desierto mientras intenta revolucionar el mundo en un mundo muy parecido al de star wars",
         "price" : "U$S44",
         "editorial" : "NoPede",
-        "stock" : 12
+        "stock" : 0
     }
 ]
 
@@ -36,7 +36,7 @@ def BookList(reuqest):
     return render(
         reuqest,
         'BookStore/book-list.html',
-        {}
+        {'bookList' : json }
     )
 
 def BookDetail(request):
@@ -45,3 +45,4 @@ def BookDetail(request):
         'BookStore/book-detail.html',
         {}
     )
+
