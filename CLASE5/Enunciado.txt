@@ -2,3 +2,11 @@ Parte 1
 - Crear una vista que muestre una lista de los libros disponibles.(2 o 3min - HASTA 10.47)
 - Crear una vista que muestre una lista de Authores.
 - Crear uan vista que muestre una lisita de Editoriales. (3 min hasta 10.59AM)
+
+Parte 2
+- En cada una de las vistas anteriores, convertir a cada item de la lista en una 
+url a una vista donde se pueda ver el detalle de la entidad seleccionada.
+    * Cuando hago click en un libro, quiero poder ver sus datos en otra vista.
+    * Cuando hago click en un autor y editorial lo mismo...
+
+3 min (hasta 11.13AM)

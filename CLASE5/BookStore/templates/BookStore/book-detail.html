@@ -7,12 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h3> Lista de libros </h3>
-    <ul>
-        {% for book in bookList %}
-            <li> <a href="{% url 'bookDetail' book.id %}">{{book.title}}</a>  </li>
-        {% endfor %}
-    </ul>
+    <p> title : {{book.title}}</p>
+    <p> Sinosis : {{ book.sysnopsis }} </p>
+    <p> Editorial : {{book.editorial}}</p>
+    <!-- PENDIENTE -->
+    <p> Autores : {{book.authors}}</p>
 </body>
 </html>

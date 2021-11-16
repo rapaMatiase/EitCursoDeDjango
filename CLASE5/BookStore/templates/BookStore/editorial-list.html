@@ -11,7 +11,7 @@
     <h3> Lista de editoriales </h3>
     <ul>
         {% for editorial in editorialList %}
-            <li> {{editorial.name}} </li>
+            <li> <a href="{% url 'editorialDetail' editorial.id %}">{{editorial.name}}</a> </li>
         {% endfor %}
     </ul>
 </body>

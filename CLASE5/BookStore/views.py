@@ -12,7 +12,16 @@ def BookList(request):
         'BookStore/book-list.html',
         { 'bookList' : query}
     )
-    
+
+def BookDetail(request, id):
+    #El primer id es el campo en base de datos, y el segundo es el parametro que recibi.
+    query = Book.objects.get(id=id)
+    return render(
+        request,
+        'BookStore/book-detail.html',
+        { 'book' : query}
+    )
+
 def AuthorList(request):
     query = Author.objects.all()
     return render(
@@ -21,10 +30,27 @@ def AuthorList(request):
         { 'authorList' : query}
     )
 
+def AuthorDetail(request, id):
+    # Se puede utilizar get o filter
+    query = Author.objects.get(id=id)
+    return render(
+        request,
+        'BookStore/author-detail.html',
+        { 'author' : query}
+    )
+
 def EditorialList(request):
     query = Editorial.objects.all()
     return render(
         request,
         'BookStore/editorial-list.html',
         {'editorialList' : query}
+    )
+
+def EditorialDetail(request, id):
+    query = Editorial.objects.get(id=id)
+    return render(
+        request,
+        'BookStore/editorial-detail.html',
+        {'editorial' : query}
     )
