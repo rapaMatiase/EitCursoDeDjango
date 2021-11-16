@@ -1,0 +1,4 @@
+Parte 1
+- Crear una vista que muestre una lista de los libros disponibles.(2 o 3min - HASTA 10.47)
+- Crear una vista que muestre una lista de Authores.
+- Crear uan vista que muestre una lisita de Editoriales. (3 min hasta 10.59AM)
