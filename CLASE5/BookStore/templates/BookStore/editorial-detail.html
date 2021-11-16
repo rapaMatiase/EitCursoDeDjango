@@ -9,5 +9,12 @@
 <body>
     <p> Nombre : {{editorial.name}}</p>
     <p>Direccion : {{editorial.adress}}  </p>
+    <h4> Lista de titulos </h4>
+    <ul>
+    {% for book in editorial.book_set.all %}
+        <li> <a href="{% url 'bookDetail' book.id %}"> {{book.title}} </a></li>
+    {% endfor %}
+
+    </ul>
 </body>
 </html>

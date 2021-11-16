@@ -11,6 +11,11 @@
     <p> Sinosis : {{ book.sysnopsis }} </p>
     <p> Editorial : {{book.editorial}}</p>
     <!-- PENDIENTE -->
-    <p> Autores : {{book.authors}}</p>
+    <p> Autores : </p>
+    <ul>
+        {% for author in book.authors.all %}
+            <li>{{author.name}} {{author.lastname}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

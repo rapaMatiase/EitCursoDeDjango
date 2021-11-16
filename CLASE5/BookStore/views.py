@@ -41,6 +41,7 @@ def AuthorDetail(request, id):
 
 def EditorialList(request):
     query = Editorial.objects.all()
+    
     return render(
         request,
         'BookStore/editorial-list.html',
