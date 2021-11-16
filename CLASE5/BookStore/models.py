@@ -24,6 +24,7 @@ class Book(models.Model):
         on_delete=models.CASCADE
     )
     authors = models.ManyToManyField(Author)
+    price = models.IntegerField(default=0)
     #authors = models.ManyToManyField(Author, through='Entidad extra')
 
     def __str__(self):

@@ -17,3 +17,9 @@ Parte 3
 - Modificar el tempalte de Books para que puedan hacer click en editorial o author y les muestre el detalle de los mismos.
 
 3min 12.06AM
+
+Parte 4
+
+Utilizando los bloques de HTML para los templates. Crear un Header con tres links que permitan ir a la lista de libros, de authores y de editoriales sea cual sea el template en el que este.
+
+3 min 12.21Am
