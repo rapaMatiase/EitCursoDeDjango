@@ -25,6 +25,7 @@ class Book(models.Model):
     )
     authors = models.ManyToManyField(Author)
     price = models.IntegerField(default=0)
+    publish_date = models.DateTimeField(default=None, null=True)
     #authors = models.ManyToManyField(Author, through='Entidad extra')
 
     def __str__(self):
