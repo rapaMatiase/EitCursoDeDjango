@@ -9,5 +9,14 @@
 <body>
     <p>{{author.name}}</p>
     <p>{{author.lastname}}</p>
+    <ul>
+        {% for book in author.book_set.all %}
+            <li> 
+                <a href="{% url 'bookDetail' book.id %}">
+                    {{book.title}} 
+                </a> 
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

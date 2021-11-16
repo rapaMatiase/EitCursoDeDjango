@@ -10,3 +10,10 @@ url a una vista donde se pueda ver el detalle de la entidad seleccionada.
     * Cuando hago click en un autor y editorial lo mismo...
 
 3 min (hasta 11.13AM)
+
+Parte 3
+
+- Modificar el tempalte de Authores para que aparezca una lista de los libros que escibirieron y al hacer click los envie al detalle.
+- Modificar el tempalte de Books para que puedan hacer click en editorial o author y les muestre el detalle de los mismos.
+
+3min 12.06AM
