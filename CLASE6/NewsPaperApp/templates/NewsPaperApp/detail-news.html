@@ -5,5 +5,16 @@
 {% endblock %}
 
 {% block main %}
-    <p> Detalle</p>
+    <h1> {{new.title }} </h1>
+    <p> {{new.detail}} </p>
+    <img style="height:  300px;" src="{{ new.main_image.url }}" alt="">
+    {% for image in  new.images_set.all %}
+        <img style="height:  300px;" src="{{ image.image.url }}" alt="">
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <img style="height:  300px; border-radius: 3000px;" src="{{ new.write_by.image_profile.url }}" alt="">
+    {{new.write_by.lastname}}- {{new.write_by.name}}
 {% endblock %}

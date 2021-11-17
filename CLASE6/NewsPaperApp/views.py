@@ -19,9 +19,10 @@ def ListNews(request):
         {"list" : query}
     )
 
-def DetailNews(request):
+def DetailNews(request, id):
+    query = News.objects.get(id=id)
     return render (
         request,
         'NewsPaperApp/detail-news.html',
-        {}
+        {'new' : query}
     )

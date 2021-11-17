@@ -12,7 +12,7 @@ urlpatterns = [
         name="listNews"
     ),
     path(
-        'detail/', 
+        'detail/<int:id>/', 
         views.DetailNews,
         name="detailNew"
     ),

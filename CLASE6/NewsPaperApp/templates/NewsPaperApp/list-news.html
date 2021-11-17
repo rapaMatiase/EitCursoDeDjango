@@ -13,6 +13,7 @@
             <div>
                 <h5>{{item.title}}</h5>
                 <p>{{item.detail}}</p>
+                <a href="{% url 'detailNew' item.id %}"> Leer mas </a>
                 <p class="small"> Escrito por {{item.write_by.lastname}},{{item.write_by.name}} el {{item.publish_date}} </p>    
             </div>
         </section>
