@@ -6,4 +6,14 @@ urlpatterns = [
         views.Index,
         name="index"
     ),
+    path(
+        'list/', 
+        views.ListNews,
+        name="listNews"
+    ),
+    path(
+        'detail/', 
+        views.DetailNews,
+        name="detailNew"
+    ),
 ]
