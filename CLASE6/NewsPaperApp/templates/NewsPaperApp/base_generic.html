@@ -13,8 +13,8 @@
         <img src="{% static 'NewsPaperApp/assert/infobae.png' %}" alt="infobae logo" class="logo">
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Noticas</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'listNews' %}">Noticas</a></li>
                 <li><a href="">Contactanos</a></li>
 
             </ul>

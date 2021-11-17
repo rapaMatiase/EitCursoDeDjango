@@ -29,3 +29,33 @@ nav ul{
     height: 50px;
     padding: 10px;
 }
+
+.news{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.news section{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border: orange solid 1px;
+}
+
+.news section div h5{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.news section div .small{
+    color: gray;
+    font-size: 15px;
+}
+
+
+.news section img{
+    height: 180px;
+    padding: 10px;
+}

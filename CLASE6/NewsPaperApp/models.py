@@ -3,18 +3,23 @@ from django.db.models.fields import CharField
 
 # Create your models here.
 
-"""
-NO, VAMOS VOLVER DESPUES ACA.
-"""
-
 class Theme(models.Model):
     name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 class Journalist(models.Model):
     name = models.CharField(max_length=40)
     lastname = models.CharField(max_length=40)
     thems = models.ManyToManyField(Theme)
-    # image_profile= ""
+    image_profile= models.ImageField(null=True)
+
+    def __str__(self):
+        return "{0}, {1}".format(
+            self.lastname,
+            self.name
+        )
 
 class News(models.Model):
     state_of_news = [
@@ -37,4 +42,7 @@ class News(models.Model):
         Journalist,
         on_delete=models.CASCADE
     )
-    #imagen = ""
+    main_image= models.ImageField(null=True)
+
+    def __str__(self):
+        return self.title
