@@ -18,6 +18,7 @@ class Comment(models.Model):
     detail = models.CharField(max_length=100)
     publish_date = models.DateField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, default=None, null=True, on_delete=models.CASCADE)
 
 """ class Friendly(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

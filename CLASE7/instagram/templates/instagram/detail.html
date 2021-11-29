@@ -6,7 +6,8 @@ Home
 {% endblock %}
 
 {% block main %}
-{% for post in posts %}
+
+<h3> Detalle </h3>
 <div class="card mb-3" style="max-width: 540px;">
     <div class="row g-0">
         <div class="col-md-4">
@@ -19,10 +20,17 @@ Home
                     {{post.detail}}
                 </p>
                 <p class="card-text"><small class="text-muted">{{post.publish_date}}</small></p>
-                <a href="{% url 'detail' post.id %}" class="btn btn-primary"> Ver detalle </a>
             </div>
         </div>
     </div>
 </div>
-{% endfor %}
+    {% for comment in  post.comment_set.all %}
+        <p>{{comment.detail}}</p>
+        <p>{{comment.user}}</p>
+    {% endfor %}
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Enviar">
+    </form>
 {% endblock %}
