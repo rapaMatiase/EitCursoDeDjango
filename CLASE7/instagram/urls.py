@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Home, Detial
+from .views import Home, Detial, Perfil
 
 urlpatterns = [
     path(
@@ -11,5 +11,10 @@ urlpatterns = [
         'detail/<int:post_id>/', 
         Detial, 
         name="detail"
+    ),
+    path(
+        'perfil/<int:user_id>/',
+        Perfil,
+        name='profile'
     )
 ]

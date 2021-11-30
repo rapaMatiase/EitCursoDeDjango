@@ -1,0 +1,16 @@
+{% extends 'instagram/base_generic.html' %}
+
+
+{% block title %}
+Perfil
+{% endblock %}
+
+{% block main %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock %}

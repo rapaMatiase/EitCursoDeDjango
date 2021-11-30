@@ -4,6 +4,13 @@ from django.utils.translation import deactivate
 from django.contrib.auth.models import User
 # Create your models here.
 
+class Profile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ImageField(null=True)
+    detail = models.CharField(max_length=100)
+    date = models.DateField(auto_now_add=True)
+
+
 class Post(models.Model):
     #El id que lo agrega por defualt el ORM
     detail = models.CharField(max_length=100)

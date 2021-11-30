@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Post, User, Comment
+from .models import Post, User, Profile
 # Create your views here.
-from .forms import CommentForm
+from .forms import CommentForm, ProfileForm
 
 def Home(request, user_id):
     # Primero instancio el usuario al que le corresponde el id
@@ -29,4 +29,27 @@ def Detial(request, post_id):
         request,
         'instagram/detail.html',
         {'post' : post, 'form' : form }
+    )
+
+def Perfil(request, user_id):
+    #Cuando es get muestro lo que tengo cargado en base de datos
+    if request.method == 'GET':
+        #Busco la intancia del usurio
+        user = User.objects.get(id=user_id)
+        #Busco el pefil del usuario
+        profile = Profile.objects.get(user=user)
+        #Cargo el perfil del usuario en un formulario como apra uqe lo pueda modificar.
+        form = ProfileForm(instance=profile)
+    elif request.method == 'POST':
+        #Verifico lo que me enviaron y lo guardo en base de datos. Tambien, vuelvo a cargar el html con los nuevos datos. 
+        print("Pase poca aca ")
+        #Cargo el perfil del usuario en un formulario como apra uqe lo pueda modificar.
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+    return render(
+        request,
+        'instagram/perfil.html',
+        {'form': form}
     )
